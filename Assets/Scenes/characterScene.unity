@@ -268,8 +268,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 25.6
-    m_UpperAngle: 116.9
+    m_LowerAngle: -60
+    m_UpperAngle: 60
 --- !u!1 &168965596
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +319,7 @@ CapsuleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.37, y: 1.07}
-  m_Direction: 0
+  m_Direction: 1
 --- !u!50 &168965599
 Rigidbody2D:
   serializedVersion: 4
@@ -415,8 +415,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 5.6
-    m_UpperAngle: 43.75
+    m_LowerAngle: -5
+    m_UpperAngle: 5
 --- !u!1 &178153344
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,8 +944,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 57.7
-    m_UpperAngle: 115.4
+    m_LowerAngle: -10
+    m_UpperAngle: 40
 --- !u!1 &466848633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,8 +1091,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 22.2
-    m_UpperAngle: 152.7
+    m_LowerAngle: -60
+    m_UpperAngle: 60
 --- !u!1 &540248347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,8 +1238,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -9.2
-    m_UpperAngle: 64.7
+    m_LowerAngle: -90
+    m_UpperAngle: 90
 --- !u!1 &555514337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1385,8 +1385,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -65.3
-    m_UpperAngle: 6.3
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &1102579696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,8 +1679,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 19.11
-    m_UpperAngle: 92.36
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &1411427206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,8 +1729,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.37, y: 2.37}
-  m_Direction: 0
+  m_Size: {x: 2.37, y: 0.91}
+  m_Direction: 1
 --- !u!50 &1411427209
 Rigidbody2D:
   serializedVersion: 4
@@ -1826,8 +1826,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 54.4
+    m_LowerAngle: -5
+    m_UpperAngle: 5
 --- !u!1 &1501589779
 GameObject:
   m_ObjectHideFlags: 0
@@ -2105,8 +2105,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -250.8
-    m_UpperAngle: -144.2
+    m_LowerAngle: -90
+    m_UpperAngle: 90
 --- !u!1 &1663441348
 GameObject:
   m_ObjectHideFlags: 0
@@ -2404,8 +2404,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 69
-    m_UpperAngle: 116.5
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &1921758735
 GameObject:
   m_ObjectHideFlags: 0
@@ -2551,8 +2551,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 35.2
-    m_UpperAngle: 99.49
+    m_LowerAngle: -10
+    m_UpperAngle: 40
 --- !u!1 &2053272744
 GameObject:
   m_ObjectHideFlags: 0

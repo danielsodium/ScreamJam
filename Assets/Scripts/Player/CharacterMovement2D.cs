@@ -13,7 +13,7 @@ public class Character2DController : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private BoxCollider2D _box_collider;
     private bool _is_space_down;
-    private bool facing_right = false;
+    private bool facing_right = true;
     private float _movement;
 
    private void Start()

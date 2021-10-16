@@ -136,10 +136,9 @@ GameObject:
   - component: {fileID: 13040260}
   - component: {fileID: 13040259}
   - component: {fileID: 13040262}
-  - component: {fileID: 13040263}
   m_Layer: 7
   m_Name: left_hand
-  m_TagString: Leg
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -271,18 +270,6 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -20
     m_UpperAngle: 20
---- !u!114 &13040263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 13040257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ce4a63163506948b80c1d14887569b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &168965596
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,10 +283,9 @@ GameObject:
   - component: {fileID: 168965599}
   - component: {fileID: 168965598}
   - component: {fileID: 168965601}
-  - component: {fileID: 168965602}
   m_Layer: 7
   m_Name: right_feet
-  m_TagString: Leg
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -312,7 +298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168965596}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.82, y: -7.86, z: 0}
+  m_LocalPosition: {x: 1.87, y: -8.07, z: 0}
   m_LocalScale: {x: 0.7692899, y: 0.9734255, z: 1}
   m_Children: []
   m_Father: {fileID: 212245883}
@@ -395,7 +381,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 4a22a9d9151a03842a979ec94b37fc1e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -429,20 +415,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -5
-    m_UpperAngle: 5
---- !u!114 &168965602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168965596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ce4a63163506948b80c1d14887569b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+    m_LowerAngle: -10
+    m_UpperAngle: 10
 --- !u!1 &170079956
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,10 +562,9 @@ GameObject:
   - component: {fileID: 178153347}
   - component: {fileID: 178153346}
   - component: {fileID: 178153349}
-  - component: {fileID: 178153350}
   m_Layer: 7
   m_Name: right_arm
-  m_TagString: Leg
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -723,18 +696,6 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 0
---- !u!114 &178153350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178153344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ce4a63163506948b80c1d14887569b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &212245878
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,33 +705,70 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 212245883}
-  - component: {fileID: 212245879}
+  - component: {fileID: 212245881}
+  - component: {fileID: 212245880}
+  - component: {fileID: 212245882}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &212245879
+--- !u!114 &212245880
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212245878}
-  m_Enabled: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41ce4a63163506948b80c1d14887569b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &212245881
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212245878}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 662243204d9721a44b934e97534c729d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &212245882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212245878}
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5174650c4b36e014ba90f6c19f5b9845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 8.54
-  JumpForce: 10
+  MovementSpeed: 2
+  JumpForce: 3
+  step_wait: 1
   player_mask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 119
   ground_check_transform: {fileID: 1755309780}
   check_radius: 0.3
+  left_leg: {fileID: 1825416614}
+  right_leg: {fileID: 1380301527}
+  anim: {fileID: 212245881}
 --- !u!4 &212245883
 Transform:
   m_ObjectHideFlags: 0
@@ -779,8 +777,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212245878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.75352, y: 1.1477, z: 0}
-  m_LocalScale: {x: 0.44598067, y: 0.37289914, z: 1}
+  m_LocalPosition: {x: -5.7, y: 0, z: 0}
+  m_LocalScale: {x: 0.4459807, y: 0.37289914, z: 1}
   m_Children:
   - {fileID: 1755309780}
   - {fileID: 555514338}
@@ -815,10 +813,9 @@ GameObject:
   - component: {fileID: 329404126}
   - component: {fileID: 329404129}
   - component: {fileID: 329404130}
-  - component: {fileID: 329404131}
   m_Layer: 7
   m_Name: body_2
-  m_TagString: Leg
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -873,7 +870,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!212 &329404128
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -964,18 +961,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   force: 150
---- !u!114 &329404131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 329404124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ce4a63163506948b80c1d14887569b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &364239158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,10 +1107,9 @@ GameObject:
   - component: {fileID: 442817028}
   - component: {fileID: 442817031}
   - component: {fileID: 442817032}
-  - component: {fileID: 442817033}
   m_Layer: 7
   m_Name: left_leg_down
-  m_TagString: Leg
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1138,7 +1122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442817026}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4, y: -6.82, z: 0}
+  m_LocalPosition: {x: 1.114001, y: -6.8418097, z: 0}
   m_LocalScale: {x: 0.7692899, y: 0.9734255, z: 1}
   m_Children: []
   m_Father: {fileID: 212245883}
@@ -1221,7 +1205,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 32ad90ef82438f443a88ed6cee01726e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1255,7 +1239,7 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 5
+    m_LowerAngle: 0
     m_UpperAngle: 40
 --- !u!114 &442817032
 MonoBehaviour:
@@ -1269,20 +1253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5b83601317b204380477779faf3a13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetRotation: 0
+  targetRotation: 5
   force: 150
---- !u!114 &442817033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442817026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ce4a63163506948b80c1d14887569b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &466848633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,10 +1268,9 @@ GameObject:
   - component: {fileID: 466848636}
   - component: {fileID: 466848635}
   - component: {fileID: 466848638}
-  - component: {fileID: 466848639}
   m_Layer: 7
   m_Name: right_hand
-  m_TagString: Leg
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1431,18 +1402,6 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -20
     m_UpperAngle: 20
---- !u!114 &466848639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466848633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ce4a63163506948b80c1d14887569b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &540248347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,10 +1416,9 @@ GameObject:
   - component: {fileID: 540248349}
   - component: {fileID: 540248352}
   - component: {fileID: 540248353}
-  - component: {fileID: 540248354}
   m_Layer: 7
   m_Name: right_sholder
-  m_TagString: Leg
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1606,18 +1564,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   force: 50
---- !u!114 &540248354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 540248347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ce4a63163506948b80c1d14887569b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &555514337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,10 +1578,9 @@ GameObject:
   - component: {fileID: 555514339}
   - component: {fileID: 555514342}
   - component: {fileID: 555514343}
-  - component: {fileID: 555514344}
   m_Layer: 7
   m_Name: head
-  m_TagString: Leg
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1765,8 +1710,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -20
-    m_UpperAngle: 20
+    m_LowerAngle: -40
+    m_UpperAngle: 40
 --- !u!114 &555514343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1781,18 +1726,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   force: 10
---- !u!114 &555514344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 555514337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ce4a63163506948b80c1d14887569b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &754771562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1938,10 +1871,9 @@ GameObject:
   - component: {fileID: 1102579699}
   - component: {fileID: 1102579698}
   - component: {fileID: 1102579701}
-  - component: {fileID: 1102579702}
   m_Layer: 7
   m_Name: left_arm
-  m_TagString: Leg
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2037,7 +1969,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 55f061a8b320fb14fbe9406760678058, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2073,18 +2005,6 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 0
---- !u!114 &1102579702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1102579696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ce4a63163506948b80c1d14887569b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1380301527
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,10 +2019,9 @@ GameObject:
   - component: {fileID: 1380301529}
   - component: {fileID: 1380301532}
   - component: {fileID: 1380301533}
-  - component: {fileID: 1380301534}
   m_Layer: 7
   m_Name: right_leg
-  m_TagString: Leg
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2115,7 +2034,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380301527}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.0128152, y: -4.721377, z: 0}
+  m_LocalPosition: {x: 1.0628154, y: -4.9313765, z: 0}
   m_LocalScale: {x: 0.7692899, y: 0.9734255, z: 1}
   m_Children: []
   m_Father: {fileID: 212245883}
@@ -2198,7 +2117,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: db27db15d9a696340b408cb59fcc7e07, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2224,16 +2143,16 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: -0.5720181, y: 0.90461606}
-  m_ConnectedAnchor: {x: 0.5218768, y: -0.07565441}
+  m_Anchor: {x: 0.04924647, y: 1.491819}
+  m_ConnectedAnchor: {x: -0.09008249, y: 0.29581583}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -20
-    m_UpperAngle: 20
+    m_LowerAngle: -40
+    m_UpperAngle: 40
 --- !u!114 &1380301533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2247,19 +2166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetRotation: 0
-  force: 150
---- !u!114 &1380301534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1380301527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ce4a63163506948b80c1d14887569b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  force: 200
 --- !u!1 &1411427206
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,10 +2180,9 @@ GameObject:
   - component: {fileID: 1411427209}
   - component: {fileID: 1411427208}
   - component: {fileID: 1411427211}
-  - component: {fileID: 1411427212}
   m_Layer: 7
   m_Name: left_feet
-  m_TagString: Leg
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2289,7 +2195,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411427206}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.88, y: -8.03, z: 0}
+  m_LocalPosition: {x: 1.594001, y: -8.051809, z: 0}
   m_LocalScale: {x: 0.7692899, y: 0.9734255, z: 1}
   m_Children: []
   m_Father: {fileID: 212245883}
@@ -2372,7 +2278,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0ef44f32a05620a49b50cff8d3934393, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2406,20 +2312,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -5
-    m_UpperAngle: 5
---- !u!114 &1411427212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411427206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ce4a63163506948b80c1d14887569b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+    m_LowerAngle: -10
+    m_UpperAngle: 10
 --- !u!1 &1501589779
 GameObject:
   m_ObjectHideFlags: 0
@@ -2566,10 +2460,9 @@ GameObject:
   - component: {fileID: 1502693400}
   - component: {fileID: 1502693403}
   - component: {fileID: 1502693404}
-  - component: {fileID: 1502693405}
   m_Layer: 7
   m_Name: left_sholder
-  m_TagString: Leg
+  m_TagString: Arm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2715,18 +2608,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   force: 50
---- !u!114 &1502693405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502693398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ce4a63163506948b80c1d14887569b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1663441348
 GameObject:
   m_ObjectHideFlags: 0
@@ -2740,10 +2621,9 @@ GameObject:
   - component: {fileID: 1663441351}
   - component: {fileID: 1663441350}
   - component: {fileID: 1663441353}
-  - component: {fileID: 1663441354}
   m_Layer: 7
   m_Name: body
-  m_TagString: Leg
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2798,7 +2678,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!212 &1663441352
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2865,18 +2745,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRotation: 0
   force: 150
---- !u!114 &1663441354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663441348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ce4a63163506948b80c1d14887569b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1755309778
 GameObject:
   m_ObjectHideFlags: 0
@@ -2921,10 +2789,9 @@ GameObject:
   - component: {fileID: 1825416616}
   - component: {fileID: 1825416619}
   - component: {fileID: 1825416620}
-  - component: {fileID: 1825416621}
   m_Layer: 7
   m_Name: left_leg
-  m_TagString: Leg
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2937,7 +2804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825416614}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.45599923, y: -4.8281903, z: 0}
+  m_LocalPosition: {x: 1.17, y: -4.85, z: 0}
   m_LocalScale: {x: 0.7692899, y: 0.9734255, z: 1}
   m_Children: []
   m_Father: {fileID: 212245883}
@@ -3020,7 +2887,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 825106b0ef178794783e78630b36c8d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3046,16 +2913,16 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0.001778444, y: 1.1530813}
-  m_ConnectedAnchor: {x: -0.92803186, y: 0.06308128}
+  m_Anchor: {x: 0.013849563, y: 1.3926806}
+  m_ConnectedAnchor: {x: 0.013849563, y: 0.28027546}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -20
-    m_UpperAngle: 20
+    m_LowerAngle: -40
+    m_UpperAngle: 40
 --- !u!114 &1825416620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3069,19 +2936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetRotation: 0
-  force: 150
---- !u!114 &1825416621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1825416614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ce4a63163506948b80c1d14887569b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  force: 200
 --- !u!1 &1921758735
 GameObject:
   m_ObjectHideFlags: 0
@@ -3096,10 +2951,9 @@ GameObject:
   - component: {fileID: 1921758737}
   - component: {fileID: 1921758740}
   - component: {fileID: 1921758741}
-  - component: {fileID: 1921758742}
   m_Layer: 7
   m_Name: right_leg_down
-  m_TagString: Leg
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3112,7 +2966,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921758735}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.17, y: -6.63, z: 0}
+  m_LocalPosition: {x: 1.2200003, y: -6.8399997, z: 0}
   m_LocalScale: {x: 0.7692899, y: 0.9734255, z: 1}
   m_Children: []
   m_Father: {fileID: 212245883}
@@ -3195,7 +3049,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 24b259e220d8103469e547095cffa66e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3229,7 +3083,7 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 5
+    m_LowerAngle: 0
     m_UpperAngle: 40
 --- !u!114 &1921758741
 MonoBehaviour:
@@ -3243,20 +3097,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5b83601317b204380477779faf3a13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetRotation: 0
+  targetRotation: 5
   force: 150
---- !u!114 &1921758742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921758735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ce4a63163506948b80c1d14887569b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2053272744
 GameObject:
   m_ObjectHideFlags: 0
@@ -3335,7 +3177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053272744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.05, y: 0.02, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

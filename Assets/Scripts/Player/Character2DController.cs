@@ -20,6 +20,9 @@ public class Character2DController : MonoBehaviour
     Rigidbody2D right_legRB;
     Rigidbody2D left_armRB;
     Rigidbody2D right_armRB;
+     
+    public bool grounded;
+
 
     public Animator anim;
 
@@ -46,13 +49,27 @@ public class Character2DController : MonoBehaviour
             _is_space_down = true;
         }
     }
+    void OnCollisionEnter(Collision theCollision){
+        if(theCollision.gameObject.name == "floor")
+        {
+            print("GROUNDED");
+            grounded = true;
+        }
+    }
+    
+    //consider when character is jumping .. it will exit collision.
+    void OnCollisionExit(Collision theCollision){
+        if(theCollision.gameObject.name == "floor")
+        {
+            grounded = false;
+        }
+    }
 
     private void FixedUpdate()
     {
-        if (_is_space_down )
+        if (_is_space_down && grounded)
         {
             StartCoroutine(jump(step_wait));
-            print("jumped");
             _is_space_down = false;
         }
         if (_movement == 0)
@@ -83,15 +100,6 @@ public class Character2DController : MonoBehaviour
 
     }
 
-    private bool isGrounded()
-    {
-        if (Physics2D.OverlapCircle(ground_check_transform.position, check_radius, player_mask))
-        {
-            return true;
-        }
-        return false;
-    }
-
     private void flip()
     {
         // Yeah i tried scaling and rotations but nothing works lol
@@ -104,7 +112,6 @@ public class Character2DController : MonoBehaviour
 
     IEnumerator jump(float seconds)
     {
-        print("JUMP!");
         right_legRB.AddForce(Vector2.up * (JumpForce * 10000) * Time.deltaTime);
         yield return new WaitForSeconds(seconds);
         left_legRB.AddForce(Vector2.up * (JumpForce * 10000) * Time.deltaTime);

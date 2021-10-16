@@ -14,8 +14,12 @@ public class Character2DController : MonoBehaviour
 
     public GameObject left_leg;
     public GameObject right_leg;
+    public GameObject left_arm;
+    public GameObject right_arm;
     Rigidbody2D left_legRB;
     Rigidbody2D right_legRB;
+    Rigidbody2D left_armRB;
+    Rigidbody2D right_armRB;
 
     public Animator anim;
 
@@ -28,6 +32,8 @@ public class Character2DController : MonoBehaviour
     {
         left_legRB = left_leg.GetComponent<Rigidbody2D>();
         right_legRB = right_leg.GetComponent<Rigidbody2D>();
+        left_armRB = left_arm.GetComponent<Rigidbody2D>();
+        right_armRB = right_arm.GetComponent<Rigidbody2D>();
         Vector3 transform_vector = transform.localScale;
         _facing_right = (transform_vector.x > 0);
 
@@ -43,9 +49,10 @@ public class Character2DController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_is_space_down && isGrounded())
+        if (_is_space_down )
         {
-            jump();
+            StartCoroutine(jump(step_wait));
+            print("jumped");
             _is_space_down = false;
         }
         if (_movement == 0)
@@ -87,22 +94,27 @@ public class Character2DController : MonoBehaviour
 
     private void flip()
     {
+        // Yeah i tried scaling and rotations but nothing works lol
         _facing_right = !_facing_right;
+        /*
         Vector3 transform_scale = transform.localScale;
         transform_scale.x *= -1;
-        transform.localScale = transform_scale;
+        transform.localScale = transform_scale;*/
     }
 
-    private void jump()
+    IEnumerator jump(float seconds)
     {
-
+        print("JUMP!");
+        right_legRB.AddForce(Vector2.up * (JumpForce * 10000) * Time.deltaTime);
+        yield return new WaitForSeconds(seconds);
+        left_legRB.AddForce(Vector2.up * (JumpForce * 10000) * Time.deltaTime);
     }
 
     IEnumerator walkRight(float seconds)
     {
-        right_legRB.AddForce(Vector2.right * (MovementSpeed * 1000) * Time.deltaTime);
+        right_armRB.AddForce(Vector2.right * (MovementSpeed * 1000) * Time.deltaTime);
         yield return new WaitForSeconds(seconds);
-        left_legRB.AddForce(Vector2.right * (MovementSpeed * 1000) * Time.deltaTime);
+        left_armRB.AddForce(Vector2.right * (MovementSpeed * 1000) * Time.deltaTime);
 
     }
 

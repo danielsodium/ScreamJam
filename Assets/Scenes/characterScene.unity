@@ -758,8 +758,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5174650c4b36e014ba90f6c19f5b9845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 2
-  JumpForce: 3
+  MovementSpeed: 5
+  JumpForce: 20
   step_wait: 1
   player_mask:
     serializedVersion: 2

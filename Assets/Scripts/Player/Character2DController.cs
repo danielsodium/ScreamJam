@@ -10,7 +10,7 @@ public class Character2DController : MonoBehaviour
     [SerializeField] private float step_wait = 0.5f;
     public LayerMask player_mask;
     public Transform ground_check_transform;
-    public float check_radius = 0.1f;
+    public float check_radius = 0.3f;
 
     public GameObject left_leg;
     public GameObject right_leg;
@@ -29,10 +29,8 @@ public class Character2DController : MonoBehaviour
     private float _movement;
     private bool _is_space_down;
     private bool _facing_right = true;
-/*    private Vector3 delta;
-    private Vector3 previous_position;
-    private Transform[] children_transform;
-*/
+
+
     private void Start()
     {
         left_legRB = left_leg.GetComponent<Rigidbody2D>();
@@ -41,9 +39,8 @@ public class Character2DController : MonoBehaviour
         right_armRB = right_arm.GetComponent<Rigidbody2D>();
         Vector3 transform_vector = transform.localScale;
         _facing_right = (transform_vector.x > 0);
-/*        previous_position = body_collider.bounds.center;
-        children_transform = GetComponentsInChildren<Transform>();
-*/    }
+
+    }
     private void Update()
     {
         _movement = Input.GetAxis("Horizontal");
@@ -51,8 +48,6 @@ public class Character2DController : MonoBehaviour
         {
             _is_space_down = true;
         }
-<<<<<<< HEAD
-=======
     }
     void OnCollisionEnter(Collision theCollision){
         if(theCollision.gameObject.name == "floor")
@@ -77,7 +72,6 @@ public class Character2DController : MonoBehaviour
             StartCoroutine(jump(step_wait));
             _is_space_down = false;
         }
->>>>>>> main
         if (_movement == 0)
         {
             anim.Play("player_idle");
@@ -106,36 +100,6 @@ public class Character2DController : MonoBehaviour
 
     }
 
-<<<<<<< HEAD
-    private void FixedUpdate()
-    {
-        if (_is_space_down && isGrounded())
-        {
-            jump();
-            _is_space_down = false;
-        }
-        /*delta = body_collider.bounds.center - previous_position;
-        this.gameObject.transform.position += delta;
-        foreach (Transform i in children_transform)
-        {
-            i.position -= delta;
-        }
-        previous_position = body_collider.bounds.center;*/
-
-    }
-
-    
-    private bool isGrounded()
-    {
-        if (Physics2D.OverlapCircle(ground_check_transform.position, check_radius, player_mask))
-        {
-            return true;
-        }
-        return false;
-    }
-
-=======
->>>>>>> main
     private void flip()
     {
         // Yeah i tried scaling and rotations but nothing works lol
@@ -143,13 +107,7 @@ public class Character2DController : MonoBehaviour
         /*
         Vector3 transform_scale = transform.localScale;
         transform_scale.x *= -1;
-<<<<<<< HEAD
-        transform.localScale = transform_scale;
-        left_arm.GetComponent<Balance>().targetRotation *= -1;
-        right_arm.GetComponent<Balance>().targetRotation *= -1;
-=======
         transform.localScale = transform_scale;*/
->>>>>>> main
     }
 
     IEnumerator jump(float seconds)

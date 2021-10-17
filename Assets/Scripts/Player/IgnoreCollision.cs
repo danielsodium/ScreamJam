@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class IgnoreCollision : MonoBehaviour
 {
-    CapsuleCollider2D col;
+    Rigidbody2D rb;
+    CapsuleCollider2D collider;
+    // Start is called before the first frame update
     void Start()
     {
-        var colliders = GetComponentsInChildren<CapsuleCollider2D>();
-        col = GetComponent<CapsuleCollider2D>();
-        for (int i = 0; i < colliders.Length; i++)
-        {
-            for (int k = i + 1; k < colliders.Length; k++)
-            {
-                Physics2D.IgnoreCollision(colliders[i], colliders[k]);
-            }
-        }
+        rb = GetComponent<Rigidbody2D>();
+        collider = GetComponent<CapsuleCollider2D>();
+        
     }
 
+    // Update is called once per frame
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == gameObject.tag)
         {
-            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<CapsuleCollider2D>(), col);
+            Physics2D.IgnoreCollision(collider, collision.gameObject.GetComponent<CapsuleCollider2D>());
         }
     }
 }

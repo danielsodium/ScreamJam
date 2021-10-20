@@ -152,16 +152,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 212245878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5174650c4b36e014ba90f6c19f5b9845, type: 3}
+  m_Script: {fileID: 11500000, guid: e11713166b28cb649b86a7ca3d89dd3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 8.54
-  JumpForce: 10
-  player_mask:
-    serializedVersion: 2
-    m_Bits: 64
-  ground_check_transform: {fileID: 1755309780}
-  check_radius: 0.3
+  MovementSpeed: 5
+  JumpForce: 20
+  anim: {fileID: 0}
 --- !u!61 &212245880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -175,18 +171,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.1571315, y: -0.46268517}
+  m_Offset: {x: -0.6533328, y: -0.63556445}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.92, y: 1.92}
+    oldSize: {x: 4.32, y: 5.21}
     newSize: {x: 1.92, y: 1.92}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2757612, y: 1.0854982}
+  m_Size: {x: 0.90085334, y: 3.4342716}
   m_EdgeRadius: 0
 --- !u!50 &212245881
 Rigidbody2D:
@@ -250,7 +246,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6cfdef75e89f5c14ca1bc61669967fd5, type: 3}
+  m_Sprite: {fileID: 4954422511873680816, guid: a572bd77ac0bacc4d8dbd82556b0337e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -269,8 +265,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212245878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.89, y: -0.65, z: 0}
-  m_LocalScale: {x: 1.2999, y: 1.0273, z: 1}
+  m_LocalPosition: {x: -2.8842, y: 0.0058, z: 0}
+  m_LocalScale: {x: 0.8375256, y: 0.77458423, z: 1}
   m_Children:
   - {fileID: 1755309780}
   m_Father: {fileID: 0}
@@ -492,7 +488,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.325184
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

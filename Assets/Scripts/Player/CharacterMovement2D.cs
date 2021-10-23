@@ -61,8 +61,7 @@ public class Character2DController : MonoBehaviour
     private void flip()
     {
         facing_right = !facing_right;
-        Vector3 transform_scale = transform.localScale;
-        transform_scale.x *= -1;
-        transform.localScale = transform_scale;
+
+       transform.Rotate(0f, 180f, 0f);
     }
 }

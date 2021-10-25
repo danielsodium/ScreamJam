@@ -6,12 +6,15 @@ public class Weapon : MonoBehaviour
 {
   public Transform firePoint;
   public GameObject bulletPrefab;
+  public Animator animator; 
 
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetButtonDown("Fire1")) {
             Shoot();
+            animator.SetFloat("Fire", 1);
         }
     }
 
@@ -19,5 +22,6 @@ public class Weapon : MonoBehaviour
     {
         // shooting logic
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        animator.SetFloat("Fire", -1);
     }
 }
